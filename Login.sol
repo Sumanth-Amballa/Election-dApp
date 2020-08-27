@@ -17,14 +17,14 @@ contract Login {
 	mapping (address => User) users;
 	address[] public userAccts;
 	
-	function setLogin(address  _address, string memory _email, string memory _name, string _pass) public {
+	function setLogin(address  _address, string memory _email, string memory _name, string memory _pass) public {
 		Login.User storage user = users[_address];
 		user.email = _email;
 		user.name = _name;
 		user.pass=_pass;
 		userAccts.push(_address) -1;
 	}
-	uint public n = useraccts.length;
+	uint public n = userAccts.length;
 	
 	User public myVariable2;
 	constructor() public {
